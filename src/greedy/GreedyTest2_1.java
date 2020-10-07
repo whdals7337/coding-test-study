@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class GreedyTest2_1 {
 
 	public static void main(String[] args) {
+		// 숫자 카드 게임
 		// 행, 열
 		int n = 2, m =4;
 		int[][] list = {

@@ -3,6 +3,7 @@ package greedy;
 public class GreedyTest2_2 {
 
 	public static void main(String[] args) {
+		// 숫자 카드 게임
 		int result = 0;
 		// 행, 열
 		int n = 2, m =4;
