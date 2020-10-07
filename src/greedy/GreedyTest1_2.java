@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class GreedyTest1_2 {
 
 	public static void main(String[] args) {
+		// 큰수법칙
 		int result = 0;
 		// 배열의 크기, 더해지는 횟수, 연속 가능 횟수
 		int size = 5 , count = 8, limit = 3;
