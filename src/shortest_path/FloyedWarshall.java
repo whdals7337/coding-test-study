@@ -1,4 +1,4 @@
-package shorttest_path;
+package shortest_path;
 
 import java.util.Arrays;
 import java.util.Scanner;
