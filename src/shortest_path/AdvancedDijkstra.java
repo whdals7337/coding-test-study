@@ -1,4 +1,4 @@
-package shorttest_path;
+package shortest_path;
 
 import java.util.ArrayList;
 import java.util.Arrays;
