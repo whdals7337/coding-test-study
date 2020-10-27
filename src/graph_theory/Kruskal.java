@@ -65,7 +65,7 @@ public class Kruskal {
         v = sc.nextInt();
         e = sc.nextInt();
 
-        // 부모테이블상의 부모를 자기자신으로 초기회
+        // 부모테이블상의 부모를 자기자신으로 초기화
         for(int i=1; i<=v; i++){
             parent[i] = i;
         }
