@@ -27,7 +27,7 @@ class Virus {
 }
 
 // 경쟁적 전염 문제
-public class BreathFirstSearchTest4 {
+public class BreadthFirstSearchTest4 {
 
     // 시험관의 크기, 바이러스의 종류의 개수, 타겟 초, 타겟 지역(x, y)
     public static int n, k, s, x ,y;
