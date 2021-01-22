@@ -8,12 +8,12 @@ import java.util.Collections;
 import java.util.StringTokenizer;
 
 
-class BridgePostion implements Comparable<BridgePostion> {
+class BridgePosition implements Comparable<BridgePosition> {
     private int y;
     private int x1;
     private int x2;
 
-    public BridgePostion(int y, int x1, int x2) {
+    public BridgePosition(int y, int x1, int x2) {
         this.y = y;
         this.x1 = x1;
         this.x2 = x2;
@@ -32,7 +32,7 @@ class BridgePostion implements Comparable<BridgePostion> {
     }
 
     @Override
-    public int compareTo(BridgePostion o) {
+    public int compareTo(BridgePosition o) {
         return Integer.compare(o.y, this.y);
     }
 }
@@ -45,14 +45,14 @@ public class Pier {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
-        ArrayList<BridgePostion> bridges = new ArrayList<>();
+        ArrayList<BridgePosition> bridges = new ArrayList<>();
         for(int i = 0; i < n; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
             int y = Integer.parseInt(st.nextToken());
             int x1 = Integer.parseInt(st.nextToken());
             int x2 = Integer.parseInt(st.nextToken());
 
-            bridges.add(new BridgePostion(y, x1, x2));
+            bridges.add(new BridgePosition(y, x1, x2));
         }
         Collections.sort(bridges);
 
