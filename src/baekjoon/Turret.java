@@ -2,7 +2,7 @@ package baekjoon;
 
 import java.util.Scanner;
 
-// 백준 사이트 터렛 문제
+// 터렛 문제 - 1002번
 public class Turret {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
