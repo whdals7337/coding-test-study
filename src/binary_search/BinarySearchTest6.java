@@ -37,6 +37,8 @@ public class BinarySearchTest6 {
             }
 
             // 공유기가 딱맞거나 덜 설치된 경우 => 거리를 늘렸을때 공유기 개수를 확인해야함
+            // cnt는 설치될 수 있는 공유기의 수
+            // c는 실제 공유기의 수
             if(cnt >= c){
                 start = mid + 1;
                 result = mid;
