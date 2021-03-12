@@ -31,30 +31,20 @@ class BestAlbum {
             int count = plays[i]; // 재생 횟수
 
             // 장르별 총 재생 횟수 등록
-            if(genre_total.containsKey(name)) {
-               genre_total.put(name, genre_total.get(name) + count);
-            } else {
-                genre_total.put(name, count);
-            }
+            genre_total.put(name, genre_total.getOrDefault(name, 0) + count);
 
             // 장르별 노래 등록
-            if(genre_songs.containsKey(name)) {
-                genre_songs.get(name).add(new Song(i, count));
-            }else {
-                ArrayList<Song> arr = new ArrayList<>();
-                arr.add(new Song(i, count));
-                genre_songs.put(name, arr);
-            }
+            genre_songs.computeIfAbsent(name, s -> new ArrayList<>()).add(new Song(i, count));
         }
 
         // 장르별 총 재생 횟수를 내림차순으로 정렬
-        List<Map.Entry<String, Integer>> list_total = new ArrayList<>(genre_total.entrySet());
-        list_total.sort((o1, o2) -> o2.getValue().compareTo(o1.getValue()));
+        List<String> keySetList = new ArrayList<>(genre_total.keySet());
+        keySetList.sort((o1, o2) -> (genre_total.get(o2).compareTo(genre_total.get(o1))));
 
         // 정렬된 장르를 순회
-        for(Map.Entry<String, Integer> map : list_total) {
+        for(String key : keySetList) {
             // 해당 잘르에 속한 노래 목록
-            ArrayList<Song> songs = genre_songs.get(map.getKey());
+            ArrayList<Song> songs = genre_songs.get(key);
             // 정렬 (횟수에 따라서, 횟수가 같으면 인덱스 순)
             Collections.sort(songs);
 
