@@ -35,7 +35,7 @@ public class HideAndSeek1 {
         q.offer(start);
         visited[start] = true;
 
-        while (true) {
+        while (!q.isEmpty()) {
             // 만난 경우
             if(visited[K]) {
                 return;
