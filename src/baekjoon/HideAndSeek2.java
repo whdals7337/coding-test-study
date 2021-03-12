@@ -38,7 +38,7 @@ public class HideAndSeek2 {
         Queue<Integer> q = new LinkedList<>();
         q.offer(start);
 
-        while (true) {
+        while (!q.isEmpty()) {
             // 만나 경우가 1번이라도 있으면 다음 계산부터는 최소가 아님
             if(count != 0) {
                 return;
