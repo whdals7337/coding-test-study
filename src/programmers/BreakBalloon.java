@@ -1,6 +1,6 @@
 package programmers;
 
-// 프로그래머스 풍선 터트리기 묹[
+// 프로그래머스 풍선 터트리기 문제
 class BreakBalloon {
     public int solution(int[] a) {
         int answer = 0;
