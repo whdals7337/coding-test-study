@@ -1,9 +1,6 @@
 package programmers;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.*;
 
 class Node implements Comparable<Node> {
     private final int index;
@@ -32,7 +29,7 @@ class Node implements Comparable<Node> {
 class Delivery {
     static List<List<Node>> graph = new ArrayList<>();
     static int[] d;
-    static int INF = 2_000 * 50 + 1;
+    static int INF = (int) 1e9;
 
     public int solution(int N, int[][] road, int K) {
         d = new int[N + 1];
